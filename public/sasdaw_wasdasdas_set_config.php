@@ -1,8 +1,24 @@
 <?php
 
+session_start();
 include_once("../private/logger.php");
-$CONFIG_PATH = "../private/config.json";
+include_once("../private/sessions.php");
 
+if (!isset($_SESSION["admin"]))
+{
+    header("Location: ./sasdaw_wasdasdas_config_login.php");
+    exit();
+}
+else
+{
+    if (!$sessionator->validate($_SESSION["admin"]))
+    {
+        header("Location: ./sasdaw_wasdasdas_config_login.php");
+        exit();
+    }
+}
+
+$CONFIG_PATH = "../private/config.json";
 function HTMLEncode($text)
 {
 
