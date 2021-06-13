@@ -36,3 +36,4 @@ Make sure you have **ngrok** and **XAMPP** or any other local web server hosting
 ## Extra notes
 - Login for configuration settings at public/sasdaw_wasdasdas_config_login.php.
 - You can change your password at public/sasdaw_wasdasdas_authenticate.php in line 17 to whatever you want.
+- It also logs your victim's info in a text file for your own security.
