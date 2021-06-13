@@ -27,7 +27,7 @@
                 text-align: center;
                 margin: 0 auto;
                 width: 100%;
-                max-width: 500px;
+                max-width: 1000px;
             }
             .form input{
                 width: 100%;
@@ -38,6 +38,10 @@
                 border-bottom: 4px solid <?php echo $THEME_COLOR; ?>;
                 color: <?php echo $THEME_COLOR; ?>;
                 margin-bottom: 2px;
+            }
+            .form input[type="text"], .form input[type="password"]{
+                padding: 0 10px;
+                width: calc(100% - 20px);
             }
             .form input[type="submit"]{
                 border: 0;
