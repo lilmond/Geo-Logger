@@ -1,9 +1,24 @@
 <?php
 
-    include_once("../private/logger.php");
-    $CONFIG_FILE = file_get_contents("../private/config.json");
-    $CONFIG = json_decode($CONFIG_FILE);
-    $THEME_COLOR = "#ed0e58";
+session_start();
+include_once("../private/sessions.php");
+if (!isset($_SESSION["admin"]))
+{
+    header("Location: ./sasdaw_wasdasdas_config_login.php");
+    exit();
+}
+else
+{
+    if (!$sessionator->validate($_SESSION["admin"]))
+    {
+        header("Location: ./sasdaw_wasdasdas_config_login.php");
+        exit();
+    }
+}
+
+$CONFIG_FILE = file_get_contents("../private/config.json");
+$CONFIG = json_decode($CONFIG_FILE);
+$THEME_COLOR = "#ed0e58";
 
 ?>
 <!DOCTYPE html>
@@ -59,9 +74,26 @@
                 font-size: 14px;
                 font-weight: bold;
             }
+            .logout_button{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                height: 35px;
+                padding: 0 5px;
+                background-color: <?php echo $THEME_COLOR; ?>;
+                color: black;
+                font-weight: bold;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .logout_button a{
+                text-decoration: none;
+                color: black;
+            }
         </style>
     </head>
     <body>
+        <button class="logout_button"><a href="./sasdaw_wasdasdas_logout.php">LOGOUT</a></button>
         <div class="form">
             <h1>CONFIGURATION SETTINGS</h1>
             <form method="POST" action="./sasdaw_wasdasdas_set_config.php">
