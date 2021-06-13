@@ -69,16 +69,16 @@
                 <input type="text" name="og_site_name" value="<?php echo $CONFIG->og_site_name; ?>"/>
                 <label>OG TITLE</label>
                 <input type="text" name="og_title" value="<?php echo $CONFIG->og_title; ?>"/>
-                <label>OG TYPE</label>
-                <input type="text" name="og_type" value="<?php echo $CONFIG->og_type; ?>"/>
+                <label hidden="hidden">OG TYPE</label>
+                <input hidden="hidden" type="text" name="og_type" value="<?php echo $CONFIG->og_type; ?>"/>
                 <label>OG URL</label>
                 <input type="text" name="og_url" value="<?php echo $CONFIG->og_url; ?>"/>
                 <label>OG DESCRIPTION</label>
                 <input type="text" name="og_description" value="<?php echo $CONFIG->og_description; ?>"/>
                 <label>OG IMAGE</label>
                 <input type="text" name="og_image" value="<?php echo $CONFIG->og_image; ?>"/>
-                <label>TWITTER CARD</label>
-                <input type="text" name="twitter_card" value="<?php echo $CONFIG->twitter_card; ?>"/>
+                <label hidden="hidden">TWITTER CARD</label>
+                <input hidden="hidden" type="text" name="twitter_card" value="<?php echo $CONFIG->twitter_card; ?>"/>
                 <input type="submit" value="SET CONFIG"/>
             </form>
         </div>
