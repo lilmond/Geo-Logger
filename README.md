@@ -32,3 +32,7 @@ Make sure you have **ngrok** and **XAMPP** or any other local web server hosting
 5. Go to ngrok's directory where you downloaded it.
 6. Type `ngrok.exe authtoken yourapikey` in your command line
 7. Now the final step, type `ngrok http 8080` or whatever port number you're using.
+
+## Extra notes
+- Login for configuration settings at public/sasdaw_wasdasdas_config_login.php.
+- You can change your password at public/sasdaw_wasdasdas_authenticate.php in line 17 to whatever you want.
